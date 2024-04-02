@@ -17,12 +17,15 @@ lsp_zero.on_attach(function(client, bufnr)
   lsp_zero.default_keymaps({buffer = bufnr})
 end)
 
+-- LSP servers
 require("lspconfig").gopls.setup({})
 require("lspconfig").rust_analyzer.setup({})
 require("lspconfig").terraformls.setup({})
 
+-- Completion engine
 require("nvim-cmp")
 
+-- Notifications and LSP progress messages
 require("fidget").setup({})
 
 -- Options
@@ -58,9 +61,6 @@ cmd("set cmdheight=2")
 -- delays and poor user experience.
 cmd("set updatetime=50")
 
--- Debugger
-g.vimspector_enable_mappings = "HUMAN"
-
 -- Keybinds
 cmd("let mapleader = ' '")
 
@@ -76,9 +76,6 @@ map("n", "<leader>tn", "<cmd>:tabnew<cr>")
 
 -- File browsing
 map("n", "<leader>b", "<cmd>:e#1<cr>")
-
--- Debugger (vimspector)
-map("n", "<leader>dd", "<cmd>call vimspector#Launch()<cr>")
 
 -- Telescope
 map("n", "<leader>ff", "<cmd>Telescope find_files<cr>")

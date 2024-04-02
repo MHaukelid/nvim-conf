@@ -6,9 +6,6 @@ return require("packer").startup(function(use)
 	-- Theme
 	use "chriskempson/base16-vim"
 
-	-- Debugger
-	use "puremourning/vimspector"
-
 	-- Telescope
 	use {
 		"nvim-telescope/telescope.nvim",
