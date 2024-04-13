@@ -47,4 +47,16 @@ return require("packer").startup(function(use)
 		config = function() require("fidget").setup {} end
 	}
 
+	-- DAP (Debug Adapter Protocol)
+	use { 
+		"rcarriga/nvim-dap-ui", 
+		requires = {
+			"nvim-neotest/nvim-nio",
+			"mfussenegger/nvim-dap",
+		} 
+	}
+
+	use "mfussenegger/nvim-dap-python"
+	use 'leoluz/nvim-dap-go'
+
 end)
