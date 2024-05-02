@@ -22,6 +22,7 @@ require("lspconfig").gopls.setup({})
 require("lspconfig").rust_analyzer.setup({})
 require("lspconfig").terraformls.setup({})
 require("lspconfig").jedi_language_server.setup({})
+require("lspconfig").bashls.setup({})
 
 -- Completion engine
 require("nvim-cmp")

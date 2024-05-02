@@ -16,13 +16,10 @@ return require("packer").startup(function(use)
 		}
 	} 
 
-	-- Tresitter
-	use "nvim-treesitter/nvim-treesitter"
-
 	-- Autopair
 	use {
-	"windwp/nvim-autopairs",
-    config = function() require("nvim-autopairs").setup {} end
+		"windwp/nvim-autopairs",
+		config = function() require("nvim-autopairs").setup {} end
 	}
 
 	-- LSP zero conf

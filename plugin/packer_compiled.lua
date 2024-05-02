@@ -146,11 +146,6 @@ _G.packer_plugins = {
     path = "/home/mhl/.local/share/nvim/site/pack/packer/start/nvim-nio",
     url = "https://github.com/nvim-neotest/nvim-nio"
   },
-  ["nvim-treesitter"] = {
-    loaded = true,
-    path = "/home/mhl/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
-    url = "https://github.com/nvim-treesitter/nvim-treesitter"
-  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/mhl/.local/share/nvim/site/pack/packer/start/packer.nvim",
