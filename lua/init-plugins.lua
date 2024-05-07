@@ -1,5 +1,5 @@
 return require("packer").startup(function(use)
-  
+
 	-- Packer can manage itself
   use "wbthomason/packer.nvim"
 
@@ -12,14 +12,14 @@ return require("packer").startup(function(use)
 
 		requires = {
 			-- Lua functions libary
-			{ "nvim-lua/plenary.nvim" },
+			"nvim-lua/plenary.nvim"
 		}
-	} 
+	}
 
 	-- Autopair
 	use {
 		"windwp/nvim-autopairs",
-		config = function() require("nvim-autopairs").setup {} end
+		config = function() require("nvim-autopairs").setup({}) end
 	}
 
 	-- LSP zero conf
@@ -28,32 +28,26 @@ return require("packer").startup(function(use)
 		branch = "v3.x",
 		requires = {
 			-- LSP Support
-			{ "neovim/nvim-lspconfig" },
-
-			-- Autocompletion
-			{ "hrsh7th/nvim-cmp" },
-			{ "hrsh7th/cmp-nvim-lsp" },
-			{ "hrsh7th/cmp-buffer" },
-			{ "L3MON4D3/LuaSnip" },
-		}
+			"neovim/nvim-lspconfig"
+        }
 	}
 
 	-- LSP progress notifications
 	use {
 		"j-hui/fidget.nvim",
-		config = function() require("fidget").setup {} end
+		config = function() require("fidget").setup({}) end
 	}
 
 	-- DAP (Debug Adapter Protocol)
-	use { 
-		"rcarriga/nvim-dap-ui", 
+	use {
+		"rcarriga/nvim-dap-ui",
 		requires = {
 			"nvim-neotest/nvim-nio",
 			"mfussenegger/nvim-dap",
-		} 
+		}
 	}
 
 	use "mfussenegger/nvim-dap-python"
-	use 'leoluz/nvim-dap-go'
+	use "leoluz/nvim-dap-go"
 
 end)
