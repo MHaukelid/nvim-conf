@@ -1,17 +1,20 @@
 -- Plugins
 require("init-plugins")
 
+-- Treesitter
+require("init-treesitter")
+
 -- LSP
 require("init-lsp")
+
+-- DAP
+require("init-dap")
 
 -- Theme
 vim.cmd("colorscheme base16-default-dark")
 
 -- Notifications and LSP progress messages
 require("fidget").setup({})
-
--- DAP
-require("init-dap")
 
 -- Options
 vim.cmd("highlight clear LineNr")
@@ -68,6 +71,10 @@ Map("n", "<leader>fg", "<cmd>Telescope live_grep<cr>")
 -- Snippets
 Map("n", "<leader>html", "<cmd>-1read ~/.config/nvim/snippets/html.txt<cr>3jwf>a")
 Map("n", "<leader>py", "<cmd>-1read ~/.config/nvim/snippets/python.txt<cr>")
+
+-- LSP
+Map("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>")
+Map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
 
 -- DAP
 Map("n", "<F5>", "<cmd>:lua require('dap').continue()<cr>")

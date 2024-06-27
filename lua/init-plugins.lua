@@ -16,6 +16,9 @@ return require("packer").startup(function(use)
 		}
 	}
 
+    -- Treesitter
+    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+
 	-- Autopair
 	use {
 		"windwp/nvim-autopairs",

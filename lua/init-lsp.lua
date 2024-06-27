@@ -99,6 +99,7 @@ lsp_config.rust_analyzer.setup({ capabilities = capabilities })
 lsp_config.terraformls.setup({ capabilities = capabilities })
 lsp_config.pylsp.setup({ capabilities = capabilities })
 lsp_config.bashls.setup({ capabilities = capabilities })
+lsp_config.ccls.setup({ capabilities = capabilities })
 
 vim.api.nvim_create_autocmd({ "BufEnter" }, {
   pattern = { "*.bb", "*.bbappend", "*.bbclass", "*.inc", "conf/*.conf" },
